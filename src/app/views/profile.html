@@ -1,0 +1,71 @@
+<!-- TODO: Add validations -->
+<md-content md-theme="dark" class="md-padding" layout="row" layout-sm="column" id = "back">
+    <md-input-container>
+        <label id = "text">Username</label>
+        <input ng-model="vm.user.title">
+    </md-input-container>
+    <md-input-container>
+        <label id = "text">Email</label>
+        <input ng-model="vm.user.email" type="email" id ="text">
+    </md-input-container>
+</md-content id = "">
+<md-content class="md-padding" id = "back2">
+    <form name="userForm">
+        <div layout layout-sm="column">
+            <md-input-container flex="80" id = "text">
+                <label id = "text">Company (Disabled)</label>
+                <input ng-model="vm.user.company" id = "text">
+            </md-input-container>
+            <md-input-container flex>
+                <label id = "text">Submission Date</label>
+                <input type="date" ng-model="vm.user.submissionDate" id = "text">
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label id = "text">First Name</label>
+                <input id = "text" ng-model="vm.user.firstName"
+                       placeholder="Placeholder text">
+            </md-input-container>
+            <md-input-container flex>
+                <label id = "text">Last Name</label>
+                <input ng-model="vm.user.lastName" id = "text">
+            </md-input-container>
+        </div>
+        <md-input-container flex id = "text">
+            <label id = "text">Address</label>
+            <input ng-model="vm.user.address" id = "text">
+        </md-input-container>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label id = "text">City</label>
+                <input ng-model="vm.user.city" id = "text">
+            </md-input-container>
+            <md-input-container flex>
+                <label id = "text">State</label>
+                <input ng-model="user.state" id = "text">
+            </md-input-container>
+            <md-input-container flex>
+                <label id = "text">Postal Code</label>
+                <input ng-model="vm.user.postalCode" id = "text">
+            </md-input-container>
+        </div>
+        <md-input-container flex id = "text">
+            <label id = "text">About us</label>
+            <textarea id = "text" ng-model="vm.user.biography" columns="1"
+                      md-maxlength="150"></textarea>
+        </md-input-container>
+    </form>
+</md-content>
+<style>
+    #text{
+        color: white;
+    }
+
+    #back{
+        background-color:   black;
+    }
+    #back2{
+        background-color:   gray;
+    }
+</style>

@@ -1,0 +1,41 @@
+<!-- TODO: Replace table to table component when https://github.com/angular/material/issues/796 will closed -->
+<div class="table-responsive-vertical md-whiteframe-z1" id= "back">
+    <table id="table" class="table table-hover table-bordered" id= "back">
+        <thead id= "back">
+        <tr>
+            <th id= "back">#</th>
+            <th id= "back">Issue</th>
+            <th>Status</th>
+            <th>Progress</th>
+        </tr>
+        </thead>
+        <tbody id= "back">
+        <tr ng-repeat="data in vm.tableData track by $index">
+            <td data-title="ID">{{$index + 1}}</td>
+            <td data-title="Issue">{{data.issue}}</td>
+            <td data-title="Status">{{data.status}}</td>
+            <td data-title="Progress">
+                <md-progress-linear class="table-progress {{data.class}}"
+                                    md-mode="determinate"
+                                    value={{data.progress}}>
+                </md-progress-linear>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<>
+
+<style>
+    #text{
+        color: white;
+    }
+
+    #back{
+        background-color:   black;
+        color: white;
+    }
+    #back2{
+        background-color:   gray;
+    }
+</style>

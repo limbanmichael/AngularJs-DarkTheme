@@ -1,0 +1,26 @@
+<section>
+    <md-subheader class="md-accent">{{vm.title}}</md-subheader>
+    <md-list id="back">
+        <md-list-item class="md-3-line" ng-repeat="message in vm.messages" >
+            <img class="md-avatar" ng-src="assets/images/einstein.jpg">
+            <div class="md-list-item-text" id = "text">
+                <h3 id = "text">{{message.subject}}</h3>
+                <h4 id="text">{{message.userName}}</h4>
+                <p id="text">{{message.text}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</section>
+<style>
+    #text{
+        color: white;
+    }
+
+    #back{
+        background-color:   black;
+        color: white;
+    }
+    #back2{
+        background-color:   gray;
+    }
+</style>
